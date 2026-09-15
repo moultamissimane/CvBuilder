@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  backend:
+    image: mcr.microsoft.com/dotnet/sdk:6.0
+    working_dir: /app/backend
+    volumes:
+      - .:/app
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5000
+    command: dotnet run
+
+  frontend:
+    image: node:18-alpine
+    working_dir: /app/frontend
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:5000/api
+    command: bash -c "npm install && npm run dev"
+    depends_on:
+      - backend
