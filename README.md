@@ -197,21 +197,3 @@ MIT License - feel free to use this project as a starting point!
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## ❓ FAQ
-
-**Q: Can I use my existing CV?**
-A: Currently, you need to manually enter your information. Future versions will support CV import.
-
-**Q: Is my data saved?**
-A: In the MVP, data is only stored in your browser session. Future versions will include secure cloud storage.
-
-**Q: Can I generate multiple tailored CVs?**
-A: Yes! Each time you paste a new job description, a new analysis is performed.
-
-**Q: How accurate is the match score?**
-A: The MVP uses keyword matching. Integration with advanced AI models will improve accuracy.
-
----
-
-**Happy Job Hunting! 🚀**
-# CvBuilder
